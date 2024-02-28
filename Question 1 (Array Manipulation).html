@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+</head>
+
+<body>
+    <script>
+        console.log("Question 1 - Array Manipulation");
+        console.log("Input array - [1,2,3,[4,5,6,[7,8,[9,10]]]]");
+        console.log("Output array - [1,2,3,4,5,6,7,8,9,10]");
+
+        // Input Array 
+        Arr = [1, 2, 3, [4, 5, 6, [7, 8, [9, 10]]]];
+
+        // Output will be stored in this array through every itertion 
+        let outputArr = [];
+        for (let arr1Value of Arr) {                        // arr1Value is the value of 1st array 
+            if ((typeof arr1Value) === "number") {
+                outputArr.push(arr1Value);
+            }
+            if ((typeof arr1Value) === "object") {
+                for (let arr2Value of arr1Value) {                // arr2Value is the value of 2nd nested array 
+                    if ((typeof arr2Value) === "number") {
+                        outputArr.push(arr2Value);
+                    }
+                    if ((typeof arr2Value) === "object") {
+                        for (let arr3Value of arr2Value) {                // arr3Value is the value of 3rd nested array 
+                            if ((typeof arr3Value) === "number") {
+                                outputArr.push(arr3Value);
+                            }
+                            if ((typeof arr3Value) === "object") {
+                                for (let arr4Value of arr3Value) {            // arr4Value is the value of 4th nested array 
+                                    outputArr.push(arr4Value);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        console.log(outputArr);        // console printing here
+    </script>
+</body>
+
+</html>

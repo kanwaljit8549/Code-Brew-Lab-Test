@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+</head>
+<body>
+    <script>
+        console.log("Question 3 - Sort Strings in ascending order");
+        console.log("Input array - ['J','Z','D','Q','L','W','A','H','Y','K',G','N','V','R','P','X','C','M','F','O','U','S','I','E','T','B']");
+        console.log("Output - ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']");
+
+        // Input Array of Strings
+        let Arr=['J','Z','D','Q','L','W','A','H','Y','K','G','N','V','R','P','X','C','M','F','O','U','S','I','E','T','B'];
+
+        // for loop (for iterating over Array 1st time)
+        for(let i=0;i<Arr.length;i++){
+            for(let j=0;j<Arr.length;j++){        // Another for loop (for iterating over Array 2nd time) - to get 2nd value for Comparison
+                    if(Arr[i]<Arr[j]){         // Comparing and if the condition will become true, only then values are going to swap
+                    let temp=Arr[i];
+                    Arr[i]=Arr[j];
+                    Arr[j]=temp;
+                }
+            }
+        }
+        // String is compared on the basis of ASCII values on the back end.
+        console.log(Arr);
+    </script>
+    
+</body>
+</html>
