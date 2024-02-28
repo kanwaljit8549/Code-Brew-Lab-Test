@@ -43,6 +43,31 @@
             }
         }
         console.log(outputArr);        // console printing here
+
+
+// SECOND APPROACH - (Recursion)
+
+        // Output will be stored in this array through every itertion 
+        let optArr=[];
+        
+        // function for flating array 
+        function flatArray(Arr){        
+            for(let val of Arr){                    // for loop for iterating element one by one
+                if(typeof val =="number"){            // if condition - if type of value is number 
+                    optArr.push(val);                  // push current value to the output array
+                }
+                else if (typeof val =="object"){          // else if condition - if type of value is object
+                    flatArray(val);                  // recursively calling same function
+                }
+            }
+        } 
+
+        // calling function first time
+        flatArray(Arr);
+
+        console.log(optArr);        // console printing here
+
+        
     </script>
 </body>
 
