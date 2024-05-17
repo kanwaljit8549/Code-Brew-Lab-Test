@@ -1,4 +1,4 @@
-# JavaScript Coding Test (CBL)
+# Internship Experience (CBL)
 
 Joined the CBL on Feb 1, 2024. 
 
